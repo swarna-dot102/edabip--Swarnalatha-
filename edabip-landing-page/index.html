@@ -3,104 +3,150 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>EDABIP – Transform Enterprise Data into Intelligent Decision</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>EDABIP – See every number your business runs on</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header class="nav container">
-  <a href="#" class="logo"><img src="assets/edabip_logo_crop.png" alt="EDABIP"></a>
-  <div class="nav-right">
-    <button class="btn btn-outline">Login</button>
-    <span class="lang">⊕ EN ⌄</span>
+<header class="nav">
+  <div class="w">
+    <a class="lg" href="#"><b>E</b>EDABIP</a>
+    <button class="bg" id="bg" aria-label="Menu" aria-expanded="false">☰</button>
+    <nav class="nl" id="nl">
+      <a href="#how">How it works</a><a href="#modules">Modules</a><a href="#security">Security</a><a href="#faq">FAQ</a>
+      <a class="btn" href="#">Log in</a><a class="btn bp" href="#cta">Book a demo</a>
+    </nav>
   </div>
 </header>
 
-<section class="hero container">
-  <svg class="waves" viewBox="0 0 300 300" aria-hidden="true"><g fill="none" stroke-width="1"><path d="M300 0C220 20 160 120 200 300" stroke="#b9a7ee"/><path d="M300 10C230 40 180 130 220 300" stroke="#9db8f2"/><path d="M300 25C245 60 205 140 245 300" stroke="#c7b6f3"/><path d="M300 45C260 80 235 150 270 300" stroke="#8fb3ec"/></g></svg>
-  <div class="hero-text">
-    <div class="tags"><span class="tag yellow">Data Process</span><span class="tag purple">AI Analysis Platform</span><span class="tag blue">Visualisation Insights</span></div>
-    <h1>Transform Enterprise Data into <span class="accent">Intelligent</span> Decision</h1>
-    <p>Unify your enterprise data, analytics, and AI to make faster, smarter business decisions with a single intelligent platform.</p>
-    <div class="actions"><button class="btn btn-outline">Request Demo</button><button class="btn btn-dark">Get Started</button></div>
-    <ul class="mini"><li>▥ Real Time KPI Monitoring</li><li>◷ Lorem Ipsum</li><li>⛨ Lorem Ipsum</li></ul>
-  </div>
-  <div class="hero-art"><img src="assets/hero_illustration.png" alt="Data extraction illustration"></div>
-</section>
-
-<section class="overview" id="platform">
-  <div class="container">
-    <span class="badge">⚡</span>
-    <div class="center"><h2>Platform Overview</h2><p>Everything you need to your bussiness smarter and faster</p></div>
-    <div class="grid g4">
-      <article class="ov-card"><span class="num">1</span><h3>Connect Your Data</h3><p>Integrate data from ERP, CRM, HRMS, Finance, APIs, cloud platforms, and databases into a unified analytics ecosystem.</p>
-        <div class="white-box"><h4><i>⛶</i>Data Sources</h4><ul><li>100+ Data Connectors</li><li>Cloud &amp; On-Premise</li><li>Real-Time Data Sync</li><li>API Integration</li></ul></div></article>
-      <article class="ov-card"><span class="num">2</span><h3>Prepare &amp; Transform</h3><p>Clean, validate, enrich, and transform raw data into reliable datasets using powerful ETL and data processing pipelines.</p>
-        <div class="white-box"><h4><i>▣</i>Data Processing</h4><ul><li>Data Cleansing</li><li>Data Validation</li><li>ETL Pipelines</li><li>Data Enrichment</li></ul></div></article>
-      <article class="ov-card"><span class="num">3</span><h3>Visualize Business Insights</h3><p>Create interactive dashboards and monitor key business metrics with powerful visual analytics and executive reporting.</p>
-        <div class="white-box"><h4><i>▤</i>Analytics Engine</h4><ul><li>Interactive Dashboards</li><li>KPI Monitoring</li><li>Power BI</li><li>Tableau</li></ul></div></article>
-      <article class="ov-card"><span class="num">4</span><h3>AI-Powered Analytics</h3><p>Leverage predictive analytics and machine learning to forecast trends, detect anomalies, and generate intelligent recommendations.</p>
-        <div class="white-box"><h4><i>⚉</i>AI Features</h4><ul><li>Predictive Analytics</li><li>Trend Forecasting</li><li>Anomaly Detection</li><li>Smart Recommendations</li></ul></div></article>
+<section class="hero">
+  <div class="w">
+    <div>
+      <h1>See every number your business runs on, <em>before</em> it moves.</h1>
+      <p>EDABIP connects your enterprise data, cleans it, and turns it into live dashboards and AI forecasts your whole team can act on.</p>
+      <div class="row"><a class="btn bp" href="#cta">Book a demo</a><a class="btn" href="#how">See how it works</a></div>
+      <div class="trust"><span>100+ connectors</span><span>Real-time sync</span><span>AES-256 encrypted</span></div>
+    </div>
+    <div class="mw">
+      <div class="mock">
+        <div class="mh"><i></i><i></i><i></i></div>
+        <div class="ks">
+          <div class="k">Revenue<b>$2.4M</b><u>▲ 12.4%</u></div>
+          <div class="k">Orders<b>18,240</b><u>▲ 8.1%</u></div>
+          <div class="k">Churn<b>2.1%</b><u>▼ 0.4%</u></div>
+        </div>
+        <svg viewBox="0 0 400 160" role="img" aria-label="Revenue chart with forecast">
+          <g stroke="#e3e6f0"><path d="M0 40H400M0 80H400M0 120H400"/></g>
+          <path d="M0 120C40 110 60 90 100 95S160 60 200 66 250 40 270 46" fill="none" stroke="#4f46e5" stroke-width="3"/>
+          <path d="M270 46C310 40 350 26 400 14" fill="none" stroke="#ff6b5a" stroke-width="3" stroke-dasharray="7 6"/>
+          <circle cx="150" cy="75" r="6" fill="#ff6b5a"/>
+          <path d="M0 120C40 110 60 90 100 95S160 60 200 66 250 40 270 46V160H0Z" fill="#4f46e5" opacity=".08"/>
+        </svg>
+      </div>
+      <div class="pop"><b>Anomaly detected</b><br>Orders dipped 18% on Tue</div>
     </div>
   </div>
 </section>
 
-<section class="container modules">
-  <div class="mod-head"><h2>Modular Ecosystem</h2><p>Enable your teams with powerful modules that fit your business needs. Precision-engineered components designed for enterprise-scale operations.</p></div>
-  <div class="mod-row r1">
-    <article class="mod"><h3><i class="ico">▦</i>Dashboards</h3><p>Gain complete visibility into your enterprise with interactive dashboards, real-time analytics, and AI-powered insights. Monitor key performance indicators, uncover trends, and make faster, data-driven decisions from a single unified platform.</p>
-      <div class="mod-foot"><span class="pill">Enterprise Core</span><button class="btn btn-dark sm">Configure View</button></div></article>
-    <article class="mod"><h3><i class="ico">ⓘ</i>Reports</h3><p>Automated PDF/XLS export of scheduled compliance and performance audits.</p><small class="muted">↻ Last generated 2h ago</small></article>
-  </div>
-  <div class="mod-row r2">
-    <article class="mod"><h3><i class="ico">▮</i>Analytics</h3><p>Deep-dive engine for multi-dimensional data exploration and predictive testing. Leverage AI-driven insights to uncover hidden patterns.</p></article>
-    <article class="mod"><h3><i class="ico">▤</i>Alerts</h3><p>Smart notification system with multi-channel routing (Slack, SMS, Email). Never miss a critical threshold breach with intelligent escalation.</p></article>
-    <article class="mod"><h3><i class="ico">⚇</i>User Management</h3><p>Advanced SSO and directory sync for enterprise-scale organization structures. Granular RBAC and audit logging included.</p></article>
-  </div>
-</section>
+<div class="src"><div class="w">Connects with the tools your teams already use
+  <ul><li>SAP</li><li>Salesforce</li><li>Workday</li><li>Snowflake</li><li>Power BI</li><li>Tableau</li></ul>
+</div></div>
 
-<section class="container card lifecycle">
-  <div class="center"><span class="tag orange">Core Architecture</span><h2>The EDABIP Lifecycle</h2><p>From raw data to actionable insights through a precision-engineered process designed for enterprise scale.</p></div>
-  <div class="lc-grid">
-    <article class="lc c1 a"><h3><i class="ico">▤</i>Data Collection <span class="phase">Phase 01</span></h3><p>Gather high-velocity streams from multiple distributed sources including IoT, CRM, and legacy silos.</p><div><span class="chip blue">API Connectors</span> <span class="chip yellow">ETL Pipelines</span></div></article>
-    <article class="lc dark c2 b"><h3><i class="ico">⌕</i>Process Data <span class="phase">Phase 02</span></h3><p>Transform raw data into trusted business intelligence with EDABIP's intelligent data preparation engine. Automatically cleanse, validate, normalize, and enrich data from multiple enterprise sources while eliminating inconsistencies and duplicates. Advanced ETL pipelines and real-time processing ensure every dataset is accurate, analytics-ready, and optimized for dashboards, reporting, and AI-powered insights.</p><span class="chip mint">AI Integrity Shield Active</span></article>
-    <article class="lc c2 c"><h3><i class="ico">✦</i>AI Analysis <span class="phase">Phase 03</span></h3><p>Unlock deeper business intelligence with EDABIP's AI-powered analytics engine. Discover hidden patterns, forecast future trends, and detect anomalies using advanced machine learning and predictive models. Turn complex enterprise data into actionable insights that enable faster, smarter, and more confident decision-making.</p><div class="right"><button class="btn btn-dark sm">Explore Algorithms</button></div></article>
-    <article class="lc c1 d"><h3><i class="ico">⚙</i>Visualize Insights <span class="phase">Phase 04</span></h3><p>Transform complex enterprise data into intuitive, interactive dashboards designed for executive decision-making. Visualize key performance indicators, monitor business trends, and explore data through customizable charts, graphs, and reports.</p></article>
-  </div>
-</section>
-
-<section class="container card security">
-  <div class="sec-top">
-    <div><h2 class="big">Uncompromising <span class="accent">Data</span> Sovereignty</h2>
-      <p>Secure your enterprise intelligence with multi-layered architectural defense systems. We provide full visibility and ironclad control over your most sensitive analytical assets.</p>
-      <div class="actions"><button class="btn btn-dark">Explore Security Framework</button><button class="btn btn-outline">View Compliance Docs</button></div></div>
-    <img class="shield" src="assets/sovereignty.jpg.png" alt="Digital shield with lock">
-  </div>
-  <div class="center sec-head"><h2>The Four Pillars of Sovereignty</h2><p>Our zero-trust architecture ensures that your data remains yours, from the moment of ingestion to the final insight.</p></div>
-  <div class="grid g4">
-    <article class="pillar"><h3><i class="ico">◎</i>MFA Authentication</h3><p>Identity-first security with biometric and FIDO2 hardware token support across all endpoints.</p><div class="pf"><span class="chip blue">FIDO2 &amp; BIOMETRIC READY</span><a href="#">View More →</a></div></article>
-    <article class="pillar"><h3><i class="ico">⛨</i>E2EE Encryption</h3><p>Military-grade AES-256 standards applied to data both at rest and in active transit.</p><div class="pf"><span class="chip blue">AES-256 STANDARD</span><a href="#">View More →</a></div></article>
-    <article class="pillar"><h3><i class="ico">▣</i>RBAC Control</h3><p>Precision attribute-based access control (ABAC) down to the individual cell level.</p><div class="pf"><span class="chip blue">GRANULAR PERMISSIONS</span><a href="#">View More →</a></div></article>
-    <article class="pillar"><h3><i class="ico">▤</i>Immutable Audit Logs</h3><p>Tamper-proof, blockchain-verified tracking of every single user and system interaction.</p><div class="pf"><span class="chip blue">BLOCKCHAIN VERIFIED</span><a href="#">View More →</a></div></article>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="container">
-    <div class="news">
-      <div><h2 class="big">Insights for decision makers</h2><p>Join 25,000+ BI professionals receiving our weekly enterprise data brief.</p></div>
-      <form id="newsForm" novalidate><label class="sr" for="email">Business email</label><input id="email" type="email" placeholder="✉  Enter your business email" required><button class="btn btn-yellow" type="submit">Subscribe Now</button><p id="formMsg" role="status"></p></form>
+<section class="sec" id="how">
+  <div class="w">
+    <div class="hd"><h2>From scattered data to a decision in four steps</h2><p>Pick a step to see what EDABIP does at each stage.</p></div>
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-t="0">1 Connect</button>
+      <button class="tab" role="tab" aria-selected="false" data-t="1">2 Prepare</button>
+      <button class="tab" role="tab" aria-selected="false" data-t="2">3 Visualize</button>
+      <button class="tab" role="tab" aria-selected="false" data-t="3">4 Predict</button>
     </div>
-    <hr>
-    <div class="f-grid">
-      <div><strong class="f-logo">EDABIP</strong><p>© 2026 EDABIP. Enterprise Data Analytics &amp; Business Intelligence Platform.</p></div>
-      <div><h4>Platform</h4><a href="#">Feature</a><a href="#">Dashboard</a><a href="#">Integration</a><a href="#">Security</a></div>
-      <div><h4>Solutions</h4><a href="#">By Industry</a><a href="#">By Department</a><a href="#">Use Cases</a><a href="#">AI Analytics</a></div>
-      <div><h4>Connect Us</h4><a class="inl" href="#" aria-label="Website">⊕</a><a class="inl" href="mailto:info@edabip.com" aria-label="Email">✉</a></div>
+    <div class="pn on"><div><h3>Connect every source</h3><p>Link ERP, CRM, finance and HR systems without writing integration code.</p><ul><li>100+ ready connectors</li><li>Cloud and on-premise</li><li>Real-time data sync</li><li>Open API access</li></ul></div><div class="vis">🔌</div></div>
+    <div class="pn"><div><h3>Prepare data you can trust</h3><p>Clean, validate and enrich raw data in automated pipelines.</p><ul><li>Cleansing and deduplication</li><li>Validation rules</li><li>ETL pipelines</li><li>Data enrichment</li></ul></div><div class="vis">🧹</div></div>
+    <div class="pn"><div><h3>Visualize what matters</h3><p>Build dashboards and track KPIs in one shared view.</p><ul><li>Interactive dashboards</li><li>KPI monitoring</li><li>Power BI and Tableau</li><li>Scheduled reports</li></ul></div><div class="vis">📊</div></div>
+    <div class="pn"><div><h3>Predict what's next</h3><p>Forecast trends and catch anomalies before they cost you.</p><ul><li>Predictive analytics</li><li>Trend forecasting</li><li>Anomaly detection</li><li>Smart recommendations</li></ul></div><div class="vis">🔮</div></div>
+  </div>
+</section>
+
+<section class="sec g" id="modules">
+  <div class="w">
+    <div class="hd"><h2>Modules that fit how your teams work</h2><p>Use one or all of them. Each module works on the same trusted data.</p></div>
+    <div class="bn">
+      <div class="bx s4 dk"><i>▦</i><h3>Dashboards</h3><p>Interactive, real-time views of every KPI, shared across departments.</p>
+        <div class="bars"><span style="height:35%"></span><span style="height:55%"></span><span style="height:45%"></span><span style="height:70%"></span><span style="height:60%"></span><span style="height:90%"></span><span style="height:78%"></span></div></div>
+      <div class="bx s2"><i>📄</i><h3>Reports</h3><p>Scheduled PDF and XLS exports for audits and reviews.</p></div>
+      <div class="bx s2"><i>📈</i><h3>Analytics</h3><p>Explore data across dimensions and test predictions.</p></div>
+      <div class="bx s2"><i>🔔</i><h3>Alerts</h3><p>Slack, SMS and email alerts with smart escalation.</p></div>
+      <div class="bx s2"><i>👥</i><h3>User management</h3><p>SSO, directory sync, RBAC and audit logs.</p></div>
     </div>
+  </div>
+</section>
+
+<section class="st">
+  <div class="w">
+    <div><b>100+</b><span>Data connectors</span></div>
+    <div><b>25,000+</b><span>BI professionals subscribed</span></div>
+    <div><b>99.9%</b><span>Uptime target</span></div>
+    <div><b>256-bit</b><span>AES encryption</span></div>
+  </div>
+</section>
+
+<section class="sec" id="security">
+  <div class="w sg">
+    <div>
+      <h2 class="big">Your data stays yours, from ingestion to insight</h2>
+      <ul><li>Zero-trust architecture</li><li>Full visibility and control</li><li>Compliance documentation on request</li></ul>
+      <div class="row"><a class="btn bp" href="#">Security framework</a><a class="btn" href="#">Compliance docs</a></div>
+    </div>
+    <div class="pl">
+      <div class="pc">🔐<h3>MFA authentication</h3><p>Biometric and FIDO2 hardware key support.</p><em>FIDO2 READY</em></div>
+      <div class="pc">🛡️<h3>End-to-end encryption</h3><p>AES-256 at rest and in transit.</p><em>AES-256</em></div>
+      <div class="pc">🗝️<h3>RBAC control</h3><p>Attribute-based access down to the cell.</p><em>GRANULAR</em></div>
+      <div class="pc">🧾<h3>Immutable audit logs</h3><p>Tamper-proof tracking of every action.</p><em>VERIFIED</em></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec g" id="faq">
+  <div class="w">
+    <div class="hd c"><h2>Questions teams ask us</h2></div>
+    <div class="fq">
+      <details open><summary>How long does setup take?</summary><p>Most teams connect their first source and see a dashboard on the same day.</p></details>
+      <details><summary>Can we keep using Power BI or Tableau?</summary><p>Yes. EDABIP feeds both tools, and you can also use its own dashboards.</p></details>
+      <details><summary>Where is our data stored?</summary><p>You control where data lives. It is encrypted at rest and in transit.</p></details>
+      <details><summary>Who can see what?</summary><p>Role and attribute-based rules control access down to individual cells, and every action is logged.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="cta" class="ctas">
+  <div class="w">
+    <div class="cta">
+      <h2>Get the weekly enterprise data brief</h2>
+      <p>Join 25,000+ BI professionals. Or book a demo and we'll show you EDABIP on your data.</p>
+      <form id="f" novalidate>
+        <label class="sr" for="em">Business email</label>
+        <input id="em" type="email" placeholder="you@company.com">
+        <button class="btn bc" type="submit">Subscribe</button>
+      </form>
+      <p id="msg" role="status"></p>
+    </div>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="w">
+    <div class="fg">
+      <div><div class="lg" style="color:#fff"><b>E</b>EDABIP</div><p class="fd">Enterprise Data Analytics &amp; Business Intelligence Platform.</p></div>
+      <div><h4>Platform</h4><a href="#">Features</a><a href="#">Dashboards</a><a href="#">Integrations</a><a href="#">Security</a></div>
+      <div><h4>Solutions</h4><a href="#">By industry</a><a href="#">By department</a><a href="#">Use cases</a><a href="#">AI analytics</a></div>
+      <div><h4>Contact</h4><a href="mailto:info@edabip.com">info@edabip.com</a><a href="#">Support</a></div>
+    </div>
+    <div class="cp">© 2026 EDABIP. All rights reserved.</div>
   </div>
 </footer>
+
 <script src="js/script.js"></script>
 </body>
 </html>
