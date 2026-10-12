@@ -1,151 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>EDABIP – See every number your business runs on</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EDABIP follows your enterprise data from source to decision: connect, clean, visualize and predict in one platform.">
+  <title>EDABIP - Follow your data from source to decision</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body id="top">
 
-<header class="nav">
-  <div class="w">
-    <a class="lg" href="#"><b>E</b>EDABIP</a>
-    <button class="bg" id="bg" aria-label="Menu" aria-expanded="false">☰</button>
-    <nav class="nl" id="nl">
-      <a href="#how">How it works</a><a href="#modules">Modules</a><a href="#security">Security</a><a href="#faq">FAQ</a>
-      <a class="btn" href="#">Log in</a><a class="btn bp" href="#cta">Book a demo</a>
+<!-- Icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+  <symbol id="i-db" viewBox="0 0 24 24"><path d="M4 7c0-2 16-2 16 0s-16 2-16 0M4 7v5c0 2 16 2 16 0V7M4 12v5c0 2 16 2 16 0v-5"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.5 3-5.5 6.5-5.5s6.5 2 6.5 5.5M16 4.8a3.5 3.5 0 0 1 0 6.4M18 14.8c2 .7 3.5 2.3 3.5 5.2"/></symbol>
+  <symbol id="i-id" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M6 16c.5-1.5 1.7-2 3-2s2.5.5 3 2M14 10h4M14 14h3"/></symbol>
+  <symbol id="i-coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M14.5 9c-.5-1-1.5-1.5-2.5-1.5-1.5 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1 2-2.5 2c-1 0-2-.5-2.5-1.5M12 6v1.5M12 16.5V18"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="6.5" height="6.5" rx="1"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h8l4 4v14H7z"/><path d="M10 12h6M10 16h6"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 17V11a6 6 0 0 1 12 0v6l1.5 2h-15zM10 21h4"/></symbol>
+  <symbol id="i-bars" viewBox="0 0 24 24"><path d="M6 20v-8M12 20V5M18 20v-11"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></symbol>
+  <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 3v5M15 3v5M6 8h12v3a6 6 0 0 1-12 0zM12 17v4"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></symbol>
+  <symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-9M15 6h6v6"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M11 12l8-8M16 7l3 3"/></symbol>
+  <symbol id="i-finger" viewBox="0 0 24 24"><path d="M12 4a7 7 0 0 1 7 7v1M5 11a7 7 0 0 1 3-5.7M12 8a3 3 0 0 1 3 3v3a8 8 0 0 1-1 4M9 11v1a9 9 0 0 1-1 4M12 11v3a6 6 0 0 1-2 4.5"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+</defs></svg>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="EDABIP home">
+      <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#6d28d9"/><path d="M10 9h12M10 16h9M10 23h12" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cx="24" cy="16" r="2.4" fill="#ffb400"/></svg>EDABIP
+    </a>
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Open menu"><svg class="ic"><use href="#i-menu"/></svg></button>
+    <nav id="nav" class="nav" aria-label="Main">
+      <a href="#journey">Journey</a><a href="#modules">Modules</a><a href="#security">Security</a><a href="#subscribe">Subscribe</a>
+      <button class="btn btn-ghost" id="login-open" type="button">Login</button>
     </nav>
   </div>
 </header>
 
-<section class="hero">
-  <div class="w">
-    <div>
-      <h1>See every number your business runs on, <em>before</em> it moves.</h1>
-      <p>EDABIP connects your enterprise data, cleans it, and turns it into live dashboards and AI forecasts your whole team can act on.</p>
-      <div class="row"><a class="btn bp" href="#cta">Book a demo</a><a class="btn" href="#how">See how it works</a></div>
-      <div class="trust"><span>100+ connectors</span><span>Real-time sync</span><span>AES-256 encrypted</span></div>
-    </div>
-    <div class="mw">
-      <div class="mock">
-        <div class="mh"><i></i><i></i><i></i></div>
-        <div class="ks">
-          <div class="k">Revenue<b>$2.4M</b><u>▲ 12.4%</u></div>
-          <div class="k">Orders<b>18,240</b><u>▲ 8.1%</u></div>
-          <div class="k">Churn<b>2.1%</b><u>▼ 0.4%</u></div>
-        </div>
-        <svg viewBox="0 0 400 160" role="img" aria-label="Revenue chart with forecast">
-          <g stroke="#e3e6f0"><path d="M0 40H400M0 80H400M0 120H400"/></g>
-          <path d="M0 120C40 110 60 90 100 95S160 60 200 66 250 40 270 46" fill="none" stroke="#4f46e5" stroke-width="3"/>
-          <path d="M270 46C310 40 350 26 400 14" fill="none" stroke="#ff6b5a" stroke-width="3" stroke-dasharray="7 6"/>
-          <circle cx="150" cy="75" r="6" fill="#ff6b5a"/>
-          <path d="M0 120C40 110 60 90 100 95S160 60 200 66 250 40 270 46V160H0Z" fill="#4f46e5" opacity=".08"/>
-        </svg>
+<main id="main">
+
+  <!-- Hero with interactive data flow -->
+  <section class="hero wrap" aria-labelledby="hero-title">
+    <p class="eyebrow">Enterprise data analytics &amp; business intelligence</p>
+    <h1 id="hero-title">Follow your data from <mark>source to decision.</mark></h1>
+    <p class="lead">EDABIP connects every system, cleans what flows through it, and turns it into dashboards, reports and alerts your teams can trust. Try it below: switch a source off and watch the outputs change.</p>
+    <div class="actions"><a class="btn btn-primary" href="#subscribe">Request a demo</a><a class="btn btn-ghost" href="#journey">See how it works</a></div>
+
+    <div class="flow card" aria-label="Interactive data flow demo (sample data)">
+      <div class="flow-col">
+        <h2 class="flow-title">1 &middot; Sources</h2>
+        <div id="sources" class="sources"></div>
       </div>
-      <div class="pop"><b>Anomaly detected</b><br>Orders dipped 18% on Tue</div>
+      <div class="flow-hub">
+        <div class="hub"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#6d28d9"/><path d="M10 9h12M10 16h9M10 23h12" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cx="24" cy="16" r="2.4" fill="#ffb400"/></svg></div>
+        <p class="hub-label">EDABIP engine</p>
+        <p class="hub-num" id="hub-records" aria-live="polite">0 records / day</p>
+        <p class="hub-note">cleaned and validated</p>
+      </div>
+      <div class="flow-col">
+        <h2 class="flow-title">3 &middot; Outputs</h2>
+        <ul class="outputs">
+          <li class="out"><svg class="ic"><use href="#i-grid"/></svg><span>Live dashboards</span><b id="out-dash">0</b></li>
+          <li class="out"><svg class="ic"><use href="#i-doc"/></svg><span>Reports ready</span><b id="out-rep">0</b></li>
+          <li class="out"><svg class="ic"><use href="#i-bell"/></svg><span>Smart alerts</span><b id="out-alert">0</b></li>
+        </ul>
+        <p class="flow-hint">Sample data for illustration only.</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<div class="src"><div class="w">Connects with the tools your teams already use
-  <ul><li>SAP</li><li>Salesforce</li><li>Workday</li><li>Snowflake</li><li>Power BI</li><li>Tableau</li></ul>
-</div></div>
+  <!-- Journey (tabs) -->
+  <section class="section wrap" id="journey" aria-labelledby="journey-title">
+    <div class="head"><p class="eyebrow">The journey</p><h2 id="journey-title">Four stops between raw data and a decision</h2></div>
+    <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+    <div id="stages" class="stages" role="tablist" aria-label="Data journey stages"></div>
+    <div id="stage-panel" class="stage-panel card" role="tabpanel" tabindex="0"></div>
+  </section>
 
-<section class="sec" id="how">
-  <div class="w">
-    <div class="hd"><h2>From scattered data to a decision in four steps</h2><p>Pick a step to see what EDABIP does at each stage.</p></div>
-    <div class="tabs" role="tablist">
-      <button class="tab" role="tab" aria-selected="true" data-t="0">1 Connect</button>
-      <button class="tab" role="tab" aria-selected="false" data-t="1">2 Prepare</button>
-      <button class="tab" role="tab" aria-selected="false" data-t="2">3 Visualize</button>
-      <button class="tab" role="tab" aria-selected="false" data-t="3">4 Predict</button>
+  <!-- Modules (search + filter) -->
+  <section class="section wrap" id="modules" aria-labelledby="modules-title">
+    <div class="head"><p class="eyebrow">Modules</p><h2 id="modules-title">Use one module, or the whole platform</h2></div>
+    <div class="toolbar">
+      <div class="search"><svg class="ic"><use href="#i-search"/></svg><label class="sr" for="module-search">Search modules</label><input id="module-search" type="search" placeholder="Search modules, for example alerts"></div>
+      <div id="chips" class="chips" role="group" aria-label="Filter by category"></div>
     </div>
-    <div class="pn on"><div><h3>Connect every source</h3><p>Link ERP, CRM, finance and HR systems without writing integration code.</p><ul><li>100+ ready connectors</li><li>Cloud and on-premise</li><li>Real-time data sync</li><li>Open API access</li></ul></div><div class="vis">🔌</div></div>
-    <div class="pn"><div><h3>Prepare data you can trust</h3><p>Clean, validate and enrich raw data in automated pipelines.</p><ul><li>Cleansing and deduplication</li><li>Validation rules</li><li>ETL pipelines</li><li>Data enrichment</li></ul></div><div class="vis">🧹</div></div>
-    <div class="pn"><div><h3>Visualize what matters</h3><p>Build dashboards and track KPIs in one shared view.</p><ul><li>Interactive dashboards</li><li>KPI monitoring</li><li>Power BI and Tableau</li><li>Scheduled reports</li></ul></div><div class="vis">📊</div></div>
-    <div class="pn"><div><h3>Predict what's next</h3><p>Forecast trends and catch anomalies before they cost you.</p><ul><li>Predictive analytics</li><li>Trend forecasting</li><li>Anomaly detection</li><li>Smart recommendations</li></ul></div><div class="vis">🔮</div></div>
-  </div>
-</section>
+    <p id="count" class="count" role="status" aria-live="polite"></p>
+    <div id="module-grid" class="module-grid"></div>
+    <p id="empty" class="empty" hidden>No modules match your search. Try another word.</p>
+  </section>
 
-<section class="sec g" id="modules">
-  <div class="w">
-    <div class="hd"><h2>Modules that fit how your teams work</h2><p>Use one or all of them. Each module works on the same trusted data.</p></div>
-    <div class="bn">
-      <div class="bx s4 dk"><i>▦</i><h3>Dashboards</h3><p>Interactive, real-time views of every KPI, shared across departments.</p>
-        <div class="bars"><span style="height:35%"></span><span style="height:55%"></span><span style="height:45%"></span><span style="height:70%"></span><span style="height:60%"></span><span style="height:90%"></span><span style="height:78%"></span></div></div>
-      <div class="bx s2"><i>📄</i><h3>Reports</h3><p>Scheduled PDF and XLS exports for audits and reviews.</p></div>
-      <div class="bx s2"><i>📈</i><h3>Analytics</h3><p>Explore data across dimensions and test predictions.</p></div>
-      <div class="bx s2"><i>🔔</i><h3>Alerts</h3><p>Slack, SMS and email alerts with smart escalation.</p></div>
-      <div class="bx s2"><i>👥</i><h3>User management</h3><p>SSO, directory sync, RBAC and audit logs.</p></div>
+  <!-- Security (accordion) -->
+  <section class="section wrap" id="security" aria-labelledby="security-title">
+    <div class="sec-grid">
+      <div class="sec-intro">
+        <p class="eyebrow">Security</p>
+        <h2 id="security-title">Your data stays yours, from the first source to the last chart.</h2>
+        <p class="lead">A zero-trust architecture with full visibility and control over your most sensitive analytical assets.</p>
+        <ul class="ticks"><li>Zero-trust by default</li><li>Encrypted at rest and in transit</li><li>Every action is logged</li></ul>
+      </div>
+      <div id="pillars" class="pillars"></div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="st">
-  <div class="w">
-    <div><b>100+</b><span>Data connectors</span></div>
-    <div><b>25,000+</b><span>BI professionals subscribed</span></div>
-    <div><b>99.9%</b><span>Uptime target</span></div>
-    <div><b>256-bit</b><span>AES encryption</span></div>
-  </div>
-</section>
-
-<section class="sec" id="security">
-  <div class="w sg">
-    <div>
-      <h2 class="big">Your data stays yours, from ingestion to insight</h2>
-      <ul><li>Zero-trust architecture</li><li>Full visibility and control</li><li>Compliance documentation on request</li></ul>
-      <div class="row"><a class="btn bp" href="#">Security framework</a><a class="btn" href="#">Compliance docs</a></div>
-    </div>
-    <div class="pl">
-      <div class="pc">🔐<h3>MFA authentication</h3><p>Biometric and FIDO2 hardware key support.</p><em>FIDO2 READY</em></div>
-      <div class="pc">🛡️<h3>End-to-end encryption</h3><p>AES-256 at rest and in transit.</p><em>AES-256</em></div>
-      <div class="pc">🗝️<h3>RBAC control</h3><p>Attribute-based access down to the cell.</p><em>GRANULAR</em></div>
-      <div class="pc">🧾<h3>Immutable audit logs</h3><p>Tamper-proof tracking of every action.</p><em>VERIFIED</em></div>
-    </div>
-  </div>
-</section>
-
-<section class="sec g" id="faq">
-  <div class="w">
-    <div class="hd c"><h2>Questions teams ask us</h2></div>
-    <div class="fq">
-      <details open><summary>How long does setup take?</summary><p>Most teams connect their first source and see a dashboard on the same day.</p></details>
-      <details><summary>Can we keep using Power BI or Tableau?</summary><p>Yes. EDABIP feeds both tools, and you can also use its own dashboards.</p></details>
-      <details><summary>Where is our data stored?</summary><p>You control where data lives. It is encrypted at rest and in transit.</p></details>
-      <details><summary>Who can see what?</summary><p>Role and attribute-based rules control access down to individual cells, and every action is logged.</p></details>
-    </div>
-  </div>
-</section>
-
-<section id="cta" class="ctas">
-  <div class="w">
-    <div class="cta">
-      <h2>Get the weekly enterprise data brief</h2>
-      <p>Join 25,000+ BI professionals. Or book a demo and we'll show you EDABIP on your data.</p>
-      <form id="f" novalidate>
-        <label class="sr" for="em">Business email</label>
-        <input id="em" type="email" placeholder="you@company.com">
-        <button class="btn bc" type="submit">Subscribe</button>
+  <!-- Subscribe -->
+  <section class="wrap" id="subscribe" aria-labelledby="sub-title">
+    <div class="subscribe card">
+      <div><h2 id="sub-title">Get the weekly data brief</h2><p>Join 25,000+ BI professionals receiving our weekly enterprise data brief.</p></div>
+      <form id="sub-form" novalidate>
+        <label for="email">Business email</label>
+        <div class="row"><input id="email" type="email" placeholder="you@company.com" autocomplete="email" aria-describedby="sub-msg"><button class="btn btn-dark" type="submit">Subscribe</button></div>
+        <p id="sub-msg" role="status" aria-live="polite"></p>
       </form>
-      <p id="msg" role="status"></p>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer class="ft">
-  <div class="w">
-    <div class="fg">
-      <div><div class="lg" style="color:#fff"><b>E</b>EDABIP</div><p class="fd">Enterprise Data Analytics &amp; Business Intelligence Platform.</p></div>
-      <div><h4>Platform</h4><a href="#">Features</a><a href="#">Dashboards</a><a href="#">Integrations</a><a href="#">Security</a></div>
-      <div><h4>Solutions</h4><a href="#">By industry</a><a href="#">By department</a><a href="#">Use cases</a><a href="#">AI analytics</a></div>
-      <div><h4>Contact</h4><a href="mailto:info@edabip.com">info@edabip.com</a><a href="#">Support</a></div>
-    </div>
-    <div class="cp">© 2026 EDABIP. All rights reserved.</div>
+</main>
+
+<footer class="footer">
+  <div class="wrap foot">
+    <div><strong class="f-brand">EDABIP</strong><p>Enterprise Data Analytics &amp; Business Intelligence Platform.<br>&copy; 2026 EDABIP</p></div>
+    <nav aria-label="Platform"><h3>Platform</h3><a href="#journey">The journey</a><a href="#modules">Modules</a><a href="#security">Security</a></nav>
+    <nav aria-label="Company"><h3>Company</h3><a href="#subscribe">Request a demo</a><a href="mailto:info@edabip.com">Contact</a></nav>
   </div>
 </footer>
+
+<!-- Login dialog -->
+<dialog id="login-dialog" aria-labelledby="login-title">
+  <form id="login-form" novalidate>
+    <h2 id="login-title">Welcome back</h2>
+    <label for="l-email">Email</label><input id="l-email" type="email" autocomplete="username">
+    <label for="l-pass">Password</label>
+    <div class="pass"><input id="l-pass" type="password" autocomplete="current-password"><button type="button" id="pass-toggle" aria-pressed="false">Show</button></div>
+    <p id="login-msg" role="alert"></p>
+    <div class="dlg-actions"><button class="btn btn-ghost" type="button" id="login-close">Cancel</button><button class="btn btn-primary" type="submit">Login</button></div>
+  </form>
+</dialog>
 
 <script src="js/script.js"></script>
 </body>
