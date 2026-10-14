@@ -1,0 +1,6 @@
+[
+  { "id": "erp",  "name": "ERP",     "detail": "Orders and inventory", "icon": "i-db",    "records": 420000 },
+  { "id": "crm",  "name": "CRM",     "detail": "Customers and deals",  "icon": "i-users", "records": 310000 },
+  { "id": "hrms", "name": "HRMS",    "detail": "People and payroll",   "icon": "i-id",    "records": 95000 },
+  { "id": "fin",  "name": "Finance", "detail": "Ledgers and invoices", "icon": "i-coin",  "records": 240000 }
+]

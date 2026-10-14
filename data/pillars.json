@@ -1,0 +1,6 @@
+[
+  { "icon": "i-finger", "title": "MFA authentication",    "badge": "FIDO2 + BIOMETRIC", "text": "Identity-first security with biometric and FIDO2 hardware key support across all endpoints." },
+  { "icon": "i-lock",   "title": "End-to-end encryption", "badge": "AES-256",           "text": "Military-grade AES-256 applied to data both at rest and in transit." },
+  { "icon": "i-key",    "title": "RBAC control",          "badge": "GRANULAR",          "text": "Precision attribute-based access control, down to the individual cell." },
+  { "icon": "i-doc",    "title": "Immutable audit logs",  "badge": "VERIFIED",          "text": "Tamper-proof tracking of every user and system interaction." }
+]

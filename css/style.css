@@ -6,6 +6,7 @@
   --r:16px;--border:2px solid var(--ink);--pop:4px 4px 0 var(--ink);
 }
 *{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
 html{scroll-behavior:smooth;scroll-padding-top:84px}
 body{font-family:"Plus Jakarta Sans",system-ui,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;overflow-x:hidden}
 a{color:inherit;text-decoration:none}ul{list-style:none}
@@ -126,6 +127,16 @@ dialog input{width:100%;border:var(--border);border-radius:12px;padding:10px 14p
 .pass{display:flex;gap:8px}.pass button{border:var(--border);background:#fff;border-radius:12px;padding:0 14px;font:inherit;font-weight:700;cursor:pointer}
 #login-msg{min-height:1.4em;font-size:.88rem;font-weight:600;margin-top:8px}
 .dlg-actions{display:flex;justify-content:flex-end;gap:var(--s1);margin-top:var(--s2)}
+
+/* Loading, error and empty states */
+.status{display:flex;align-items:center;justify-content:center;gap:var(--s2);flex-wrap:wrap;padding:var(--s3);border:2px dashed var(--ink);border-radius:var(--r);background:#fff;color:var(--muted);font-weight:600;text-align:center}
+.status-error{border-style:solid;color:#8a1c12;background:#fff1ef}
+.spinner{width:22px;height:22px;border:3px solid var(--violet-soft);border-top-color:var(--violet);border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Form feedback */
+.msg-ok{color:#0b5d2a}.msg-error{color:#8a1c12}
+input[aria-invalid=true]{border-color:#8a1c12!important;background:#fff8f7}
 
 /* Responsive */
 @media(max-width:1000px){

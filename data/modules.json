@@ -1,0 +1,10 @@
+[
+  { "name": "Dashboards",      "cat": "Visualize", "icon": "i-grid",  "text": "Real-time views of every KPI, shared across departments." },
+  { "name": "Reports",         "cat": "Visualize", "icon": "i-doc",   "text": "Scheduled PDF and XLS exports for audits and reviews." },
+  { "name": "Analytics",       "cat": "Visualize", "icon": "i-bars",  "text": "Explore data across dimensions and test predictions." },
+  { "name": "Alerts",          "cat": "Automate",  "icon": "i-bell",  "text": "Slack, SMS and email alerts with smart escalation." },
+  { "name": "Connectors",      "cat": "Automate",  "icon": "i-plug",  "text": "Plug in ERP, CRM, finance and HR systems in minutes." },
+  { "name": "Data quality",    "cat": "Automate",  "icon": "i-check", "text": "Automatic cleansing and validation rules for every pipeline." },
+  { "name": "Forecasting",     "cat": "Predict",   "icon": "i-trend", "text": "Trend forecasts and anomaly detection on your own data." },
+  { "name": "User management", "cat": "Govern",    "icon": "i-user",  "text": "SSO, directory sync, roles and audit logging." }
+]

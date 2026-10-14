@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Connect",
+    "title": "Connect every source",
+    "text": "Link your ERP, CRM, HRMS, finance tools, APIs and cloud platforms without writing integration code.",
+    "items": ["100+ ready connectors", "Cloud and on-premise", "Real-time data sync", "API integration"],
+    "metric": "100+",
+    "label": "connectors available"
+  },
+  {
+    "name": "Prepare",
+    "title": "Prepare data you can trust",
+    "text": "Clean, validate and enrich raw data in automated pipelines so every team sees the same numbers.",
+    "items": ["Data cleansing", "Data validation", "ETL pipelines", "Data enrichment"],
+    "metric": "99.9%",
+    "label": "records validated"
+  },
+  {
+    "name": "Visualize",
+    "title": "Visualize what matters",
+    "text": "Build interactive dashboards and monitor KPIs in one shared view, with Power BI and Tableau support.",
+    "items": ["Interactive dashboards", "KPI monitoring", "Power BI and Tableau", "Scheduled reports"],
+    "metric": "1 view",
+    "label": "for every team"
+  },
+  {
+    "name": "Predict",
+    "title": "Predict what comes next",
+    "text": "Use predictive analytics to forecast trends, detect anomalies and get plain-language recommendations.",
+    "items": ["Predictive analytics", "Trend forecasting", "Anomaly detection", "Smart recommendations"],
+    "metric": "30 days",
+    "label": "forecast horizon"
+  }
+]
