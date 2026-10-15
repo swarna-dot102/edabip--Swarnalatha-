@@ -29,7 +29,10 @@ h1,h2,h3{line-height:1.12;letter-spacing:-.02em;font-weight:800}
 .site-header{position:sticky;top:0;z-index:30;background:rgba(255,253,248,.92);backdrop-filter:blur(8px);border-bottom:var(--border)}
 .bar{display:flex;align-items:center;justify-content:space-between;height:72px}
 .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.3rem}.mark{width:32px;height:32px}
-.nav{display:flex;align-items:center;gap:var(--s3);font-weight:600;font-size:.95rem}.nav a:hover{color:var(--violet)}
+.nav{display:flex;align-items:center;gap:var(--s3);font-weight:600;font-size:.95rem}.nav a{padding-block:4px;border-bottom:3px solid transparent}
+.nav a:hover{color:var(--violet)}
+.nav a[aria-current=location]{color:var(--violet);border-bottom-color:var(--citrus)}
+[tabindex="-1"]:focus{outline:none}
 .nav .btn{padding:8px 20px}
 .menu-btn{display:none;background:#fff;border:var(--border);border-radius:10px;padding:6px;cursor:pointer;color:var(--ink)}
 
@@ -123,7 +126,15 @@ dialog{border:var(--border);border-radius:var(--r);padding:var(--s3);width:min(9
 dialog::backdrop{background:rgba(29,18,48,.55)}
 dialog h2{font-size:1.5rem;margin-bottom:var(--s2)}
 dialog label{display:block;font-weight:700;font-size:.9rem;margin:12px 0 4px}
-dialog input{width:100%;border:var(--border);border-radius:12px;padding:10px 14px;font:inherit}
+dialog input,dialog select,dialog textarea{width:100%;border:var(--border);border-radius:12px;padding:10px 14px;font:inherit;background:#fff;color:var(--ink)}
+dialog textarea{resize:vertical}
+#demo-dialog{width:min(92vw,520px)}
+.dlg-note{color:var(--muted);font-size:.85rem}
+.field-msg{min-height:1.3em;font-size:.85rem;font-weight:600;margin-top:4px}
+.check{display:flex;align-items:flex-start;gap:10px;margin-top:14px}
+.check input{width:20px;height:20px;margin-top:3px;flex:none}
+.check label{margin:0;font-weight:600}
+.success-text{margin-bottom:var(--s2)}
 .pass{display:flex;gap:8px}.pass button{border:var(--border);background:#fff;border-radius:12px;padding:0 14px;font:inherit;font-weight:700;cursor:pointer}
 #login-msg{min-height:1.4em;font-size:.88rem;font-weight:600;margin-top:8px}
 .dlg-actions{display:flex;justify-content:flex-end;gap:var(--s1);margin-top:var(--s2)}
@@ -136,7 +147,14 @@ dialog input{width:100%;border:var(--border);border-radius:12px;padding:10px 14p
 
 /* Form feedback */
 .msg-ok{color:#0b5d2a}.msg-error{color:#8a1c12}
-input[aria-invalid=true]{border-color:#8a1c12!important;background:#fff8f7}
+input[aria-invalid=true],select[aria-invalid=true],textarea[aria-invalid=true]{border-color:#8a1c12!important;background:#fff8f7}
+
+/* Demo request note, small buttons, footer text buttons */
+.demo-status{display:flex;align-items:center;flex-wrap:wrap;gap:var(--s1) var(--s2);margin-top:var(--s2);padding:10px 16px;background:var(--mint);border:var(--border);border-radius:14px;font-weight:600;max-width:640px}
+.status-actions{display:flex;gap:var(--s1);flex-wrap:wrap}
+.btn-small{padding:6px 14px;font-size:.85rem}
+.link-btn{display:block;font:inherit;color:inherit;background:none;border:0;padding:4px 0;cursor:pointer;text-align:left}
+.link-btn:hover{color:var(--citrus)}
 
 /* Responsive */
 @media(max-width:1000px){

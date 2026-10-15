@@ -2,16 +2,18 @@
 import { $, icon, escapeHtml, animateNumber } from './dom.js';
 import { loadSources } from './api.js';
 import { loadSection } from './status.js';
+import { loadState, saveState } from './storage.js';
 
 const RECORDS_PER_REPORT = 60000;
 const RECORDS_PER_ALERT = 150000;
 const DASHBOARDS_PER_SOURCE = 3;
+const ACTIVE_SOURCES_KEY = 'activeSources';
 
 const state = { sources: [], active: new Set() };
 
-function sourceButtonHtml(source) {
-  return `<button type="button" class="src" data-id="${escapeHtml(source.id)}" aria-pressed="true">
-    ${icon(source.icon)}<span><b>${escapeHtml(source.name)}</b><small>${escapeHtml(source.detail)}</small></span><span class="state">ON</span>
+function sourceButtonHtml(source, isOn) {
+  return `<button type="button" class="src" data-id="${escapeHtml(source.id)}" aria-pressed="${isOn}">
+    ${icon(source.icon)}<span><b>${escapeHtml(source.name)}</b><small>${escapeHtml(source.detail)}</small></span><span class="state">${isOn ? 'ON' : 'OFF'}</span>
   </button>`;
 }
 
@@ -30,13 +32,21 @@ function toggleSource(button) {
   const isOn = state.active.has(id);
   button.setAttribute('aria-pressed', String(isOn));
   button.querySelector('.state').textContent = isOn ? 'ON' : 'OFF';
+  saveState(ACTIVE_SOURCES_KEY, [...state.active]);
   updateOutputs();
+}
+
+/* Sources that were switched on last time (all on the first time). */
+function restoreActiveSources(sources) {
+  const saved = loadState(ACTIVE_SOURCES_KEY, null);
+  if (!Array.isArray(saved)) return new Set(sources.map((source) => source.id));
+  return new Set(sources.filter((source) => saved.includes(source.id)).map((source) => source.id));
 }
 
 function renderSources(sources) {
   state.sources = sources;
-  state.active = new Set(sources.map((source) => source.id));
-  $('sources').innerHTML = sources.map(sourceButtonHtml).join('');
+  state.active = restoreActiveSources(sources);
+  $('sources').innerHTML = sources.map((source) => sourceButtonHtml(source, state.active.has(source.id))).join('');
   updateOutputs();
 }
 

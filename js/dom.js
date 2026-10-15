@@ -41,3 +41,14 @@ export function animateNumber(element, target, suffix = '') {
   }
   requestAnimationFrame(step);
 }
+
+/* Closes a <dialog> when the dark area outside it is clicked. */
+export function enableBackdropClose(dialog) {
+  dialog.addEventListener('click', (event) => {
+    if (event.target !== dialog) return;          /* a click on something inside the dialog */
+    const box = dialog.getBoundingClientRect();
+    const isOutside = event.clientX < box.left || event.clientX > box.right ||
+                      event.clientY < box.top || event.clientY > box.bottom;
+    if (isOutside) dialog.close();
+  });
+}

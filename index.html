@@ -34,7 +34,14 @@
     <p class="eyebrow">Enterprise data analytics &amp; business intelligence</p>
     <h1 id="hero-title">Follow your data from <mark>source to decision.</mark></h1>
     <p class="lead">EDABIP connects every system, cleans what flows through it, and turns it into dashboards, reports and alerts your teams can trust. Try it below: switch a source off and watch the outputs change.</p>
-    <div class="actions"><a class="btn btn-primary" href="#subscribe">Request a demo</a><a class="btn btn-ghost" href="#journey">See how it works</a></div>
+    <div class="actions"><button class="btn btn-primary" type="button" data-open-demo>Request a demo</button><a class="btn btn-ghost" href="#journey">See how it works</a></div>
+    <div id="demo-status" class="demo-status" role="status" hidden>
+      <span id="demo-status-text"></span>
+      <span id="demo-status-actions" class="status-actions">
+        <button class="btn btn-ghost btn-small" type="button" id="demo-edit">Edit request</button>
+        <button class="btn btn-ghost btn-small" type="button" id="demo-withdraw">Withdraw</button>
+      </span>
+    </div>
 
     <div class="flow card" aria-label="Interactive data flow demo (sample data)">
       <div class="flow-col">
@@ -120,9 +127,61 @@
   <div class="wrap foot">
     <div><strong class="f-brand">EDABIP</strong><p>Enterprise Data Analytics &amp; Business Intelligence Platform.<br>&copy; 2026 EDABIP</p></div>
     <nav aria-label="Platform"><h3>Platform</h3><a href="#journey">The journey</a><a href="#modules">Modules</a><a href="#security">Security</a></nav>
-    <nav aria-label="Company"><h3>Company</h3><a href="#subscribe">Request a demo</a><a href="mailto:info@edabip.com">Contact</a></nav>
+    <nav aria-label="Company"><h3>Company</h3><button type="button" class="link-btn" data-open-demo>Request a demo</button><a href="mailto:info@edabip.com">Contact</a><button type="button" class="link-btn" id="reset-data">Reset saved data</button></nav>
   </div>
 </footer>
+
+<!-- Request demo dialog -->
+<dialog id="demo-dialog" aria-labelledby="demo-title">
+  <form id="demo-form" novalidate>
+    <h2 id="demo-title">Request a demo</h2>
+    <p class="dlg-note">Practice form: please use dummy data only.</p>
+
+    <label for="demo-name">Full name</label>
+    <input id="demo-name" type="text" autocomplete="name" aria-describedby="demo-name-error" aria-required="true">
+    <p class="field-msg" id="demo-name-error"></p>
+
+    <label for="demo-email">Work email</label>
+    <input id="demo-email" type="email" autocomplete="email" aria-describedby="demo-email-error" aria-required="true">
+    <p class="field-msg" id="demo-email-error"></p>
+
+    <label for="demo-company">Company</label>
+    <input id="demo-company" type="text" autocomplete="organization" aria-describedby="demo-company-error" aria-required="true">
+    <p class="field-msg" id="demo-company-error"></p>
+
+    <label for="demo-size">Team size</label>
+    <select id="demo-size" aria-describedby="demo-size-error" aria-required="true">
+      <option value="">Choose one</option>
+      <option value="1-10">1 to 10 people</option>
+      <option value="11-50">11 to 50 people</option>
+      <option value="51-200">51 to 200 people</option>
+      <option value="201-1000">201 to 1,000 people</option>
+      <option value="1000+">More than 1,000 people</option>
+    </select>
+    <p class="field-msg" id="demo-size-error"></p>
+
+    <label for="demo-message">What would you like to see? (optional)</label>
+    <textarea id="demo-message" rows="3" aria-describedby="demo-message-error"></textarea>
+    <p class="field-msg" id="demo-message-error"></p>
+
+    <div class="check">
+      <input id="demo-consent" type="checkbox" aria-describedby="demo-consent-error">
+      <label for="demo-consent">I agree to be contacted about this demo.</label>
+    </div>
+    <p class="field-msg" id="demo-consent-error"></p>
+
+    <div class="dlg-actions">
+      <button class="btn btn-ghost" type="button" id="demo-cancel">Cancel</button>
+      <button class="btn btn-primary" type="submit" id="demo-submit">Send request</button>
+    </div>
+  </form>
+
+  <div id="demo-success" hidden>
+    <h2 id="demo-success-title" tabindex="-1">Request received</h2>
+    <p id="demo-success-text" class="success-text"></p>
+    <div class="dlg-actions"><button class="btn btn-primary" type="button" id="demo-done">Close</button></div>
+  </div>
+</dialog>
 
 <!-- Login dialog -->
 <dialog id="login-dialog" aria-labelledby="login-title">

@@ -2,8 +2,10 @@
 import { $, icon, escapeHtml } from './dom.js';
 import { loadModules } from './api.js';
 import { loadSection } from './status.js';
+import { loadState, saveState } from './storage.js';
 
 const ALL = 'All';
+const FILTERS_KEY = 'moduleFilters';
 const state = { modules: [], category: ALL };
 
 function matchesFilters(module, query) {
@@ -26,24 +28,31 @@ function renderGrid() {
   $('empty').hidden = visible.length > 0;
 }
 
+function saveFilters() {
+  saveState(FILTERS_KEY, { category: state.category, query: $('module-search').value });
+}
+
 function selectCategory(category) {
   state.category = category;
   $('chips').querySelectorAll('.chip').forEach((chip) => {
     chip.setAttribute('aria-pressed', String(chip.dataset.category === category));
   });
+  saveFilters();
   renderGrid();
 }
 
 function renderModules(modules) {
   state.modules = modules;
-  state.category = ALL;
   const categories = [ALL, ...new Set(modules.map((module) => module.cat))];
+  const saved = loadState(FILTERS_KEY, null) ?? {};
+  state.category = categories.includes(saved.category) ? saved.category : ALL;
+  $('module-search').value = typeof saved.query === 'string' ? saved.query : '';
   $('chips').innerHTML = categories.map(chipHtml).join('');
   renderGrid();
 }
 
 export function initModules() {
-  $('module-search').addEventListener('input', renderGrid);
+  $('module-search').addEventListener('input', () => { saveFilters(); renderGrid(); });
   $('chips').addEventListener('click', (event) => {
     const chip = event.target.closest('.chip');
     if (chip) selectCategory(chip.dataset.category);

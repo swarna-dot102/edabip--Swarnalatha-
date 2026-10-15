@@ -1,22 +1,33 @@
 /* Newsletter form and login dialog. */
-import { $, setMessage } from './dom.js';
+import { $, setMessage, enableBackdropClose } from './dom.js';
 import { validateEmail, validatePassword } from './validators.js';
+import { checkField } from './form-utils.js';
+import { loadState, saveState } from './storage.js';
 
-/* Validates one field and shows the result in its message element. Returns true when valid. */
-function checkField(input, message, validate) {
-  const error = validate(input.value);
-  input.setAttribute('aria-invalid', String(error !== ''));
-  setMessage(message, error, false);
-  return error === '';
+const SUBSCRIBED_KEY = 'subscribedEmail';
+
+const savedEmail = () => loadState(SUBSCRIBED_KEY, '');
+
+function validateNewEmail(value) {
+  const error = validateEmail(value);
+  if (error) return error;
+  return value.trim().toLowerCase() === String(savedEmail()).toLowerCase()
+    ? 'This email is already subscribed.'
+    : '';
 }
 
 function initSubscribeForm() {
   const form = $('sub-form');
+  const message = $('sub-msg');
+  const saved = savedEmail();
+  if (saved) setMessage(message, `You are subscribed with ${saved}.`, true);
+
   form.addEventListener('submit', (event) => {
     event.preventDefault();
-    if (!checkField($('email'), $('sub-msg'), validateEmail)) return;
+    if (!checkField($('email'), message, validateNewEmail)) return;
+    saveState(SUBSCRIBED_KEY, $('email').value.trim());
     form.reset();
-    setMessage($('sub-msg'), 'Thank you! Your first brief is on its way.', true);
+    setMessage(message, 'Thank you! Your first brief is on its way.', true);
   });
 }
 
@@ -32,6 +43,7 @@ function initPasswordToggle() {
 
 function initLoginDialog() {
   const dialog = $('login-dialog');
+  enableBackdropClose(dialog);
   $('login-open').addEventListener('click', () => { dialog.showModal(); $('l-email').focus(); });
   $('login-close').addEventListener('click', () => dialog.close());
   initPasswordToggle();
@@ -39,8 +51,7 @@ function initLoginDialog() {
   $('login-form').addEventListener('submit', (event) => {
     event.preventDefault();
     const message = $('login-msg');
-    const emailOk = checkField($('l-email'), message, validateEmail);
-    if (!emailOk) return;
+    if (!checkField($('l-email'), message, validateEmail)) return;
     if (!checkField($('l-pass'), message, validatePassword)) return;
     setMessage(message, 'Login successful (demo only, no backend yet).', true);
   });

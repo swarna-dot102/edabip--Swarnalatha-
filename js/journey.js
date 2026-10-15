@@ -2,7 +2,9 @@
 import { $, escapeHtml } from './dom.js';
 import { loadStages } from './api.js';
 import { loadSection } from './status.js';
+import { loadState, saveState } from './storage.js';
 
+const STAGE_KEY = 'journeyStage';
 const state = { stages: [] };
 
 const tabHtml = (stage, index) =>
@@ -25,6 +27,12 @@ function showStage(index, { focus = false } = {}) {
   if (focus) tabs[index].focus();
 }
 
+/* A tab chosen by the person: show it and remember it. */
+function chooseStage(index, options) {
+  showStage(index, options);
+  saveState(STAGE_KEY, index);
+}
+
 function neighbourIndex(key, index) {
   const count = state.stages.length;
   if (key === 'ArrowRight') return (index + 1) % count;
@@ -38,19 +46,21 @@ function handleKeydown(event) {
   const next = neighbourIndex(event.key, Number(tab.dataset.index));
   if (next === null) return;
   event.preventDefault();
-  showStage(next, { focus: true });
+  chooseStage(next, { focus: true });
 }
 
 function renderStages(stages) {
   state.stages = stages;
   $('stages').innerHTML = stages.map(tabHtml).join('');
-  showStage(0);
+  const saved = loadState(STAGE_KEY, 0);
+  const isValid = Number.isInteger(saved) && saved >= 0 && saved < stages.length;
+  showStage(isValid ? saved : 0);
 }
 
 export function initJourney() {
   $('stages').addEventListener('click', (event) => {
     const tab = event.target.closest('.stage');
-    if (tab) showStage(Number(tab.dataset.index));
+    if (tab) chooseStage(Number(tab.dataset.index));
   });
   $('stages').addEventListener('keydown', handleKeydown);
   return loadSection({
