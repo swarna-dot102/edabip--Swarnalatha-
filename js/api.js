@@ -1,7 +1,7 @@
 /* Data loading: every JSON file in /data is fetched through one function. */
 
 /* Demo only: makes the "Loading…" state visible. Set to 0 before final submission. */
-const DEMO_DELAY_MS = 1000;
+const DEMO_DELAY_MS = 0;
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 async function fetchList(path) {

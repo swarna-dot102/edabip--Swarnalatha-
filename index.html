@@ -68,7 +68,7 @@
   </section>
 
   <!-- Journey (tabs) -->
-  <section class="section wrap" id="journey" aria-labelledby="journey-title">
+  <section class="section wrap" id="journey" aria-labelledby="journey-title" data-reveal>
     <div class="head"><p class="eyebrow">The journey</p><h2 id="journey-title">Four stops between raw data and a decision</h2></div>
     <div id="journey-status"></div>
     <div id="journey-content" hidden>
@@ -79,7 +79,7 @@
   </section>
 
   <!-- Modules (search + filter) -->
-  <section class="section wrap" id="modules" aria-labelledby="modules-title">
+  <section class="section wrap" id="modules" aria-labelledby="modules-title" data-reveal>
     <div class="head"><p class="eyebrow">Modules</p><h2 id="modules-title">Use one module, or the whole platform</h2></div>
     <div id="modules-status"></div>
     <div id="modules-content" hidden>
@@ -94,7 +94,7 @@
   </section>
 
   <!-- Security (accordion) -->
-  <section class="section wrap" id="security" aria-labelledby="security-title">
+  <section class="section wrap" id="security" aria-labelledby="security-title" data-reveal>
     <div class="sec-grid">
       <div class="sec-intro">
         <p class="eyebrow">Security</p>
@@ -110,7 +110,7 @@
   </section>
 
   <!-- Subscribe -->
-  <section class="wrap" id="subscribe" aria-labelledby="sub-title">
+  <section class="wrap" id="subscribe" aria-labelledby="sub-title" data-reveal>
     <div class="subscribe card">
       <div><h2 id="sub-title">Get the weekly data brief</h2><p>Join 25,000+ BI professionals receiving our weekly enterprise data brief.</p></div>
       <form id="sub-form" novalidate>
@@ -187,10 +187,14 @@
 <dialog id="login-dialog" aria-labelledby="login-title">
   <form id="login-form" novalidate>
     <h2 id="login-title">Welcome back</h2>
-    <label for="l-email">Email</label><input id="l-email" type="email" autocomplete="username">
+    <p class="dlg-note">Practice form: use dummy data only. Never enter a real password.</p>
+    <label for="l-email">Email</label>
+    <input id="l-email" type="email" autocomplete="username" aria-describedby="l-email-error" aria-required="true">
+    <p class="field-msg" id="l-email-error"></p>
     <label for="l-pass">Password</label>
-    <div class="pass"><input id="l-pass" type="password" autocomplete="current-password"><button type="button" id="pass-toggle" aria-pressed="false">Show</button></div>
-    <p id="login-msg" role="alert"></p>
+    <div class="pass"><input id="l-pass" type="password" autocomplete="current-password" aria-describedby="l-pass-error" aria-required="true"><button type="button" id="pass-toggle" aria-pressed="false">Show</button></div>
+    <p class="field-msg" id="l-pass-error"></p>
+    <p id="login-msg" class="field-msg" role="status"></p>
     <div class="dlg-actions"><button class="btn btn-ghost" type="button" id="login-close">Cancel</button><button class="btn btn-primary" type="submit">Login</button></div>
   </form>
 </dialog>
